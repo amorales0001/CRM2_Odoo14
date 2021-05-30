@@ -1,0 +1,11 @@
+<odoo>
+    <record id="model_access_custom_crm2_visit" model="ir.model.access">
+        <field name="name">model.access.custom.crm2.visit</field>
+        <field name="model_id" ref="custom_crm2.model_custom_crm2_visit"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+</odoo>

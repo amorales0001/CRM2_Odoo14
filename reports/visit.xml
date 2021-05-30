@@ -1,0 +1,14 @@
+    <odoo>
+        <data>
+                                <!--Nombre del archivo como se descarga-->
+            <report
+                string="Informe visita"
+                id="custom_crm2_visit_report"
+                model="custom_crm2.visit"
+                report_type="qweb-pdf"
+                name="custom_crm2.report_visit_card"
+                file="custom_crm2.report_visit_card"
+                attachment_use="True"
+            />
+        </data>
+    </odoo>

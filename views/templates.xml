@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <template id="report_visit_card">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o"> <!--Objeto o para iterar una vez en el documento doc-->
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Visita</h2>
+                            <p>Cliente:
+                                <span t-field="o.customer.name"/> <!--Pintar Nombre del cliente de la visita-->
+                            </p>
+                            <p>Descripción:
+                                <span t-field="o.name"/>
+                            </p>
+                            <p>Fecha:
+                                <span t-field="o.date" t-options='{"format": "dd/MM/yyyy"}'/>
+                                <!--El campo date no formatea por eso se usa t-options para usar el format-->
+                            </p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <!--
+                <template id="listing">
+                  <ul>
+                    <li t-foreach="objects" t-as="object">
+                      <a t-attf-href="#{ root }/objects/#{ object.id }">
+                        <t t-esc="object.display_name"/>
+                      </a>
+                    </li>
+                  </ul>
+                </template>
+                <template id="object">
+                  <h1><t t-esc="object.display_name"/></h1>
+                  <dl>
+                    <t t-foreach="object._fields" t-as="field">
+                      <dt><t t-esc="field"/></dt>
+                      <dd><t t-esc="object[field]"/></dd>
+                    </t>
+                  </dl>
+                </template>
+        -->
+    </data>
+</odoo>
